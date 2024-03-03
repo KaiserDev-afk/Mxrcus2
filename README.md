@@ -1,138 +1,23 @@
-#import data e hora da biblioteca
-import random
+### Hi, I'm Marcus
 
-from datetime import datetime, timedelta
-from random import randint
+## Front-end Developer
 
-opcoes = {
-1: "Cadastro de Usuário",
-2: "Cadastro de Evento",
-3: "Login"
-}
-
-opcoes2 = {
-1: "Festa",
-2: "Shows",
-3: "Eventos esportivos",
-}
-
-opcoes3 = {
-1: "Participar de eventos",
-2: "Ver meus eventos",
-3: "Cancelar eventos",
-4: "Deslogar"
-}
-
-print("Digite sua escolha:")
-print(opcoes)
-
-escolha = int(input("Qual opcao deseja: "))
-
-if escolha in opcoes:
-    if escolha == 1:
-        print("Faca seu cadastro;")
-        nome = input("Digite seu nome: ")
-        idade = input("Digite seu idade: ")
-        cpf = input("Digite seu cpf: ")
-        email = input("Digite seu email: ")
-        senha = input("Digite sua senha: ")
-        print("Cadastrado com sucesso! ")
-        print(opcoes)
-
-    if escolha == 2:
-        print("Selecione uma categoria:")
-        input(opcoes2)
-        if escolha in opcoes2:
-            if escolha == 1:
-                print("Caterogia: Festa")
-                input("Digite o endereco")
-                input("Digite a data do evento no formato dd/MM/yyyy:")
-                input("Digite o horário no seguinte formato HH:mm:ss:")
-                input("Digite uma descrição:")
-                print("Evento cadastrado com sucesso")
-                print(opcoes)
-            elif escolha == 2:
-                print("Caterogia: Shows")
-                input("Digite o endereco:")
-                input("Digite a data do evento no formato dd/MM/yyyy:")
-                input("Digite o horário no seguinte formato HH:mm:ss:")
-                input("Digite uma descrição:")
-                print("Evento cadastrado com sucesso")
-                print(opcoes)
-            elif escolha == 3:
-                print("Caterogia: Eventos esportivos")
-                input("Digite o endereco:")
-                input("Digite a data do evento no formato dd/MM/yyyy:")
-                input("Digite o horário no seguinte formato HH:mm:ss:")
-                input("Digite uma descrição:")
-                print("Evento cadastrado com sucesso")
-                print(opcoes)
-    if escolha == 3:
-        email = input("Digite seu email:")
-        senha = input("Digite sua senha:")
-        with open("login teste.txt", "w") as arquivo:
-                arquivo.write("email:" + email + "\n")
-                arquivo.write("senha:" + senha + "\n")
-
-        with open("login teste.txt", "r") as arquivo:
-                conteudo = arquivo.read()
-                email_lido = conteudo.split("\n")[0].split(":")[1].strip()
-                senha_lido = conteudo.split("\n")[1].split(":")[1].strip()
-
-        if email == email_lido and senha == senha_lido:
-            print("Login realizado com sucesso")
-            print(opcoes3)
-        else:
-            print("Login invalido")
-if escolha in opcoes3:
-    if escolha == 1:
-        eventos = [
-    {
-        "data": "2024-02-26",
-        "hora": "10:00",
-        "titulo": "Evento 1",
-        "descricao": "Futebol",
-        "status": "disponivel",
-    },
-    {
-        "data": "2023-12-05",
-        "hora": "14:00",
-        "titulo": "Evento 2",
-        "descricao": "Festa",
-        "status": "encerrado",
-    },
-    {
-        "data": "2024-11-20",
-        "hora": "12:00",
-        "titulo": "Evento 3",
-        "descricao": "Show eletronico",
-        "status": "disponivel",
-    },
-]
-
-hoje = datetime.now()
-
-eventos_disponiveis = []
-eventos_encerrados = []
-hoje = datetime.now()
-
-        eventos_disponiveis = []
-        eventos_encerrados = []
-        for evento in eventos:
-            data_evento = datetime.strptime(evento["data"] + " " + evento["hora"], "%Y-%m-%d %H:%M")
-            if evento["status"] == "disponivel" and data_evento >= hoje:
-                eventos_disponiveis.append(evento)
-            elif evento["status"] == "encerrado" and data_evento < hoje:
-                eventos_encerrados.append(evento)
-
-        print("Eventos disponíveis:")
-        # Adicione a indentação para as linhas dentro do loop
-        for evento in eventos_disponiveis:
-            # Exiba as informações do evento
-            print(f"- {evento['titulo']}: {evento['data']} {evento['hora']} - {evento['descricao']}")
-
-        print("Eventos encerrados:")
-        # Adicione a indentação para as linhas dentro do loop
-        for evento in eventos_encerrados:
-            # Exiba as informações do evento
-            print(f"- {evento['titulo']}: {evento['data']} {evento['hora']} - {evento['descricao']}")
+<h3>Things I code with</h3>
+<p>
+  <img alt="VSCode"src="https://img.shields.io/badge/-Visual%20Studio%20Code-23A9F2?style=flat-square&logo=Visual%20Studio%20Code&logoColor=white"/>
+  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-323330?style=flat-square&logo=javascript&logoColor=F7DF1E"/>
+  <img alt="TypeScript" src="https://img.shields.io/badge/-TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-14354C?style=flat-saure&logo=python&logoColor=white"/>
+  <img alt="html5" src="https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" />
+  <img alt="React" src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
+  <img alt="React-Native" src="https://img.shields.io/badge/React_Native-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
+  <img alt="Tailwind" src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" />
+  <img alt="Styled Components" src="https://img.shields.io/badge/-Styled_Components-db7092?style=flat-square&logo=styled-components&logoColor=white" />
+  <img alt="MongoDB" src="https://img.shields.io/badge/-MongoDB-13aa52?style=flat-square&logo=mongodb&logoColor=white" />
+  <img alt="Nodejs" src="https://img.shields.io/badge/-Nodejs-43853d?style=flat-square&logo=Node.js&logoColor=white" />
+  <img alt="GithubActions" src="https://img.shields.io/badge/-Github_Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Trello-0079BF?style=flat-square&logo=Trello&logoColor=white"/>
+  <img alt="git" src="https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white" />
+  <img alt="npm" src="https://img.shields.io/badge/-NPM-CB3837?style=flat-square&logo=npm&logoColor=white" />
+  <img alt="Notion" src="https://img.shields.io/badge/-Notion-000000?style=flat-square&logo=Notion&logoColor=white"/>
+</p>
